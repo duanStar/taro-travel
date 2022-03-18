@@ -2,9 +2,9 @@
   "miniprogramRoot": "./dist",
   "projectname": "taro-travel",
   "description": "仿智行taro+express+mysql全栈项目",
-  "appid": "touristappid",
+  "appid": "wxdc19ef6f4c27c99d",
   "setting": {
-    "urlCheck": true,
+    "urlCheck": false,
     "es6": false,
     "postcss": false,
     "minified": false

@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "./",
   "projectname": "taro-travel",
-  "appid": "testAppId",
+  "appid": "wxdc19ef6f4c27c99d",
   "setting": {
     "es6": false,
     "minified": false

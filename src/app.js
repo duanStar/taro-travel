@@ -1,20 +1,30 @@
-import { Component } from 'react'
-import './app.scss'
+import { Component } from "react";
+import createApp from "./dva";
+import models from "./models";
+import { Provider } from "react-redux";
 
+import "./app.scss";
+import "./assets/iconfont/iconfont.css";
+
+const dvaApp = createApp({
+  initialState: {},
+  models,
+});
+
+const store = dvaApp.getStore();
 class App extends Component {
+  componentDidMount() {}
 
-  componentDidMount () {}
+  componentDidShow() {}
 
-  componentDidShow () {}
+  componentDidHide() {}
 
-  componentDidHide () {}
-
-  componentDidCatchError () {}
+  componentDidCatchError() {}
 
   // this.props.children 是将要会渲染的页面
-  render () {
-    return this.props.children
+  render() {
+    return <Provider store={store}>{this.props.children}</Provider>;
   }
 }
 
-export default App
+export default App;
