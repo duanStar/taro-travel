@@ -27,7 +27,8 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "lint": "eslint --ext .js,.ts,.tsx,.jsx src"
+    "lint": "eslint --ext .js,.ts,.tsx,.jsx src",
+    "prepare": "husky install"
   },
   "browserslist": [
     "last 3 versions",
