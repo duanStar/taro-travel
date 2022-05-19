@@ -59,6 +59,7 @@ const config = {
         },
       },
     },
+    esnextModules: ["taro-ui", "taro-skeleton"],
   },
   sass: {
     data: "$primaryColor: #0075F4;",

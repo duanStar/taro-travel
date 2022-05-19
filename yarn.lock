@@ -1215,12 +1215,19 @@
     "@prefresh/core" "^1.3.3"
     "@prefresh/utils" "^1.1.2"
 
+"@stencil/core@^1.8.1":
+  "integrity" "sha512-dmuNYM6fnHPvE2ptHoUBQtjcpXqrHnkDtdyUD6/JrZWcJt6jBtrykewObOxzpDCMLs+NT7668ussRagdVL03gQ=="
+  "resolved" "https://registry.npmmirror.com/@stencil/core/-/core-1.17.4.tgz"
+  "version" "1.17.4"
+  dependencies:
+    "typescript" "3.9.7"
+
 "@stencil/core@2.9.0":
   "integrity" "sha512-kY3xYolZoJO1MKslL0NQccHy72R3TIl1prHgfmIrEoGcnMgc6uiskdWaGMuI5/sCGz9T+QuTVz76B1H2ySyBZg=="
   "resolved" "https://registry.npmmirror.com/@stencil/core/-/core-2.9.0.tgz"
   "version" "2.9.0"
 
-"@tarojs/api@3.4.3":
+"@tarojs/api@^3.0.11", "@tarojs/api@3.4.3":
   "integrity" "sha512-CKtYXmSs8ohVTDBPs+dzZG3TC1Tv0cIB5PnsBnPmg2Vt5ErUmHGKDvyY1R1GHxMADHrmgQDNX0Dsc9IpwtPoew=="
   "resolved" "https://registry.npmmirror.com/@tarojs/api/-/api-3.4.3.tgz"
   "version" "3.4.3"
@@ -1228,7 +1235,7 @@
     "@babel/runtime" "^7.14.5"
     "@tarojs/runtime" "3.4.3"
 
-"@tarojs/components@3.4.3":
+"@tarojs/components@>=3", "@tarojs/components@3.4.3":
   "integrity" "sha512-isWSw9wqqYjbUyh7r3CE8hF2zqjpLi5b6yTwtrvHMEpwOzUjozkGJh7/ynrtzcYz4nki2Tffkg5snnqSgr5uNQ=="
   "resolved" "https://registry.npmmirror.com/@tarojs/components/-/components-3.4.3.tgz"
   "version" "3.4.3"
@@ -1241,6 +1248,21 @@
     "omit.js" "^1.0.0"
     "resolve-pathname" "^3.0.0"
     "swiper" "6.8.0"
+    "weui" "^1.1.2"
+
+"@tarojs/components@3.0.11":
+  "integrity" "sha512-Bt8YxIvTf9gCivkzSvgpdzaxVViH9mRTIFGzjpHfWiJ2q4cR9z9I8Mh0EVP5uTk4fkSMag8xDUzVj2T0zP00bQ=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/components/-/components-3.0.11.tgz"
+  "version" "3.0.11"
+  dependencies:
+    "@stencil/core" "^1.8.1"
+    "@tarojs/taro" "^3.0.11"
+    "better-scroll" "^1.14.1"
+    "classnames" "^2.2.5"
+    "intersection-observer" "^0.7.0"
+    "omit.js" "^1.0.0"
+    "resolve-pathname" "^3.0.0"
+    "swiper" "4.4.2"
     "weui" "^1.1.2"
 
 "@tarojs/helper@3.4.3":
@@ -1395,7 +1417,7 @@
     "@tarojs/service" "3.4.3"
     "@tarojs/shared" "3.4.3"
 
-"@tarojs/react@3.4.3":
+"@tarojs/react@>=3", "@tarojs/react@3.4.3":
   "integrity" "sha512-32CIU0JZBVnZS1ADpFae67qIFr/lvmeDnd3RSJRz0oluEFyk64StIhXjgfaPXkMe64v7JbIFlx4a8yOZN14DXg=="
   "resolved" "https://registry.npmmirror.com/@tarojs/react/-/react-3.4.3.tgz"
   "version" "3.4.3"
@@ -1404,6 +1426,16 @@
     "@tarojs/shared" "3.4.3"
     "react-reconciler" "0.26.1"
     "scheduler" "^0.20.1"
+
+"@tarojs/router@^3.0.11", "@tarojs/router@3.0.11":
+  "integrity" "sha512-+GO8BbHic+yhM8TrFLIsOXqo0M5RqVgHBqJiyD/N2/1atCWZ+Z8fSr0NFqaxsPUgAkFS0eVOnhhwHXzvjvntzw=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/router/-/router-3.0.11.tgz"
+  "version" "3.0.11"
+  dependencies:
+    "@tarojs/runtime" "^3.0.11"
+    "history" "^4.10.1"
+    "universal-router" "^8.3.0"
+    "url-parse" "^1.4.7"
 
 "@tarojs/router@3.4.3":
   "integrity" "sha512-di3BQZNqwZTY+H8PT1Pv2tK+o646bTJicN3f7hW97FthYEYyO8SvlyoG21inuB8tRm0yxKtk/sjCvCZTyB5lwQ=="
@@ -1425,7 +1457,7 @@
     "@tarojs/helper" "3.4.3"
     "scss-bundle" "^3.0.2"
 
-"@tarojs/runtime@3.4.3":
+"@tarojs/runtime@^3.0.11", "@tarojs/runtime@3.4.3":
   "integrity" "sha512-0NhQIGkw/Mu9b1Sh1XXaKvvCCVLHUDZfZQnVWDOSRY7zDM7y05PdzwTEZFCWjiPufY5+U6PfKFMBfJiO3JPRvA=="
   "resolved" "https://registry.npmmirror.com/@tarojs/runtime/-/runtime-3.4.3.tgz"
   "version" "3.4.3"
@@ -1455,6 +1487,31 @@
   "resolved" "https://registry.npmmirror.com/@tarojs/shared/-/shared-3.4.3.tgz"
   "version" "3.4.3"
 
+"@tarojs/taro-alipay@2.1.0":
+  "integrity" "sha512-10jHTOJvS8g8ImOKGxVWsI3EjNAdVywVpPz5NkPzffPYRACQiwbQUp2fiVTOMqm8/JoaAEY2ZZhu6Pr5QFWXmg=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-alipay/-/taro-alipay-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/taro" "2.1.0"
+    "@tarojs/utils" "2.1.0"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.6.1"
+
+"@tarojs/taro-h5@^3.0.11", "@tarojs/taro-h5@3.0.11":
+  "integrity" "sha512-j5gQsyhdfJ9Z3+GmicYiJOY+37phqMApWtvnQtZjlPaEDKdWQlg9iTIxasHC4o5lOb+wE7BogTMEhIuNUBR17A=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-h5/-/taro-h5-3.0.11.tgz"
+  "version" "3.0.11"
+  dependencies:
+    "@tarojs/api" "^3.0.11"
+    "@tarojs/router" "^3.0.11"
+    "@tarojs/runtime" "^3.0.11"
+    "base64-js" "^1.3.0"
+    "jsonp-retry" "^1.0.3"
+    "mobile-detect" "^1.4.2"
+    "raf" "^3.4.1"
+    "unfetch" "^4.1.0"
+    "whatwg-fetch" "^2.0.4"
+
 "@tarojs/taro-h5@3.4.3":
   "integrity" "sha512-LdBQsp/Cfe9oPRnZYVEWzJYxeWrR+vEFXXI5stzIvUk0YAJ616c+OLaZgYnW7FVIIBy7pTqVSVhlJuF9+2pb0Q=="
   "resolved" "https://registry.npmmirror.com/@tarojs/taro-h5/-/taro-h5-3.4.3.tgz"
@@ -1478,6 +1535,71 @@
     "@tarojs/taro" "3.4.3"
     "loader-utils" "^1.2.3"
 
+"@tarojs/taro-qq@2.1.0":
+  "integrity" "sha512-Qmc6ZWHcnypEXmwsII1u6skdqpxEvbEAA8IGye3LPOHCLXEPDpKhnJznxoX+69IiYoyoXA/Wl2X0BFsnHImlOg=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-qq/-/taro-qq-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/taro" "2.1.0"
+    "@tarojs/utils" "2.1.0"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.6.1"
+
+"@tarojs/taro-quickapp@2.1.0":
+  "integrity" "sha512-W7DAzzLZXzNUNBWq3pBORDpIfeEFTVNcca13GVdKuwLgQYSUe2jF8sUtkORatoMpN5YkLIE9ArSo3s8aNOPwkQ=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-quickapp/-/taro-quickapp-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/taro" "2.1.0"
+    "@tarojs/utils" "2.1.0"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.6.1"
+
+"@tarojs/taro-swan@2.1.0":
+  "integrity" "sha512-qJzdpCDlO1pTcBBMNcoBvjmJro/n5hm7ZA5edIR/7IBrFnsNncZP9N/sfF+o5SMTdOUysTHiRorWv5c93VO2fA=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-swan/-/taro-swan-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/taro" "2.1.0"
+    "@tarojs/utils" "2.1.0"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.6.1"
+
+"@tarojs/taro-tt@2.1.0":
+  "integrity" "sha512-yRXazd70XcHUDSBdZ29Jeq99gfcI24M/zJt5CASb0g3yKGVWOZ449pc6p0ytqDJI3wMZnojOs1GkqTvHaSCkxw=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-tt/-/taro-tt-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/taro" "2.1.0"
+    "@tarojs/utils" "2.1.0"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.6.1"
+
+"@tarojs/taro-weapp@2.1.0":
+  "integrity" "sha512-eRdPc+rmEbu5ke6XX5j7YEnIX0rSP6RRzEO1B7wovHYDpgFnvLedzGG95LSRr7BDxwkiC3M+PwLz3z5T6TH83w=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro-weapp/-/taro-weapp-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/taro" "2.1.0"
+    "@tarojs/utils" "2.1.0"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.6.1"
+
+"@tarojs/taro@^3.0.11", "@tarojs/taro@3.0.11":
+  "integrity" "sha512-Goeb1ciGsKvkLHO0jjwsyaVae5gmK5cLPs8nSzN9AwGoXP1EfQd0OTyBsaeKR9pn9m+UN+Gv/N9ZMfELh7RJ/A=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro/-/taro-3.0.11.tgz"
+  "version" "3.0.11"
+  dependencies:
+    "@tarojs/api" "^3.0.11"
+    "@tarojs/taro-h5" "^3.0.11"
+
+"@tarojs/taro@2.1.0":
+  "integrity" "sha512-qprmtTovr2g1Y8lfvzKbwaj4rERnorn1pjfClDNX8JUDV7cqXbrZteJgz5K1ZhjSCfmFm+o3NkXd9zhmHp59mw=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/taro/-/taro-2.1.0.tgz"
+  "version" "2.1.0"
+  dependencies:
+    "@tarojs/utils" "2.1.0"
+
 "@tarojs/taro@3.4.3":
   "integrity" "sha512-dg4zjc9s+CxNFOl4On7dAnBJu6Xt2GAsyFOeNcNKlgkNPZPruYXOzAgsvepUwZ98xjYeWrpSVGekG4xi7FGnog=="
   "resolved" "https://registry.npmmirror.com/@tarojs/taro/-/taro-3.4.3.tgz"
@@ -1486,6 +1608,11 @@
     "@tarojs/api" "3.4.3"
     "@tarojs/runtime" "3.4.3"
     "@tarojs/taro-h5" "3.4.3"
+
+"@tarojs/utils@2.1.0":
+  "integrity" "sha512-Y+bkeotCVujudIf4MehfU5qIhYC2HsV16AK3KjgnfXmhL7mo0sbytnwnpTFkza6nc5YDyQ9YPYKuf6btO+uOKA=="
+  "resolved" "https://registry.npmmirror.com/@tarojs/utils/-/utils-2.1.0.tgz"
+  "version" "2.1.0"
 
 "@tarojs/webpack-runner@3.4.3":
   "integrity" "sha512-e95sYsM7RXejMmOWpB8ni038x+giFNm4odNRuYjeh5I66soxGjsdwrZXVecwC3AbjVH7+EMcLkiuHeJBqSyILw=="
@@ -3092,7 +3219,7 @@
     "isobject" "^3.0.0"
     "static-extend" "^0.1.1"
 
-"classnames@^2.2.5":
+"classnames@^2.2.5", "classnames@^2.2.6":
   "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
   "resolved" "https://registry.npmmirror.com/classnames/-/classnames-2.3.1.tgz"
   "version" "2.3.1"
@@ -3689,7 +3816,7 @@
     "whatwg-mimetype" "^2.2.0"
     "whatwg-url" "^7.0.0"
 
-"dayjs@^1.11.1":
+"dayjs@^1.11.1", "dayjs@^1.7.7":
   "integrity" "sha512-ER7EjqVAMkRRsxNCC5YqJ9d9VQYuWdGt7aiH2qA5R5wt8ZmWaP2dLUSIK6y/kVzLMlmh1Tvu5xUf4M/wdGJ5KA=="
   "resolved" "https://registry.npmmirror.com/dayjs/-/dayjs-1.11.1.tgz"
   "version" "1.11.1"
@@ -3998,6 +4125,13 @@
   "integrity" "sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w=="
   "resolved" "https://registry.npmmirror.com/dom-walk/-/dom-walk-0.1.2.tgz"
   "version" "0.1.2"
+
+"dom7@^2.1.2":
+  "integrity" "sha512-xnhwVgyOh3eD++/XGtH+5qBwYTgCm0aW91GFgPJ3XG+jlsRLyJivnbP0QmUBFhI+Oaz9FV0s7cxgXHezwOEBYA=="
+  "resolved" "https://registry.npmmirror.com/dom7/-/dom7-2.1.5.tgz"
+  "version" "2.1.5"
+  dependencies:
+    "ssr-window" "^2.0.0"
 
 "dom7@^3.0.0":
   "integrity" "sha512-oNlcUdHsC4zb7Msx7JN3K0Nro1dzJ48knvBOnDPKJ2GV9wl1i5vydJZUSyOfrkKFDZEud/jBsTk92S/VGSAe/g=="
@@ -5296,6 +5430,18 @@
   dependencies:
     "@babel/runtime" "^7.7.6"
 
+"history@^4.10.1":
+  "integrity" "sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew=="
+  "resolved" "https://registry.npmmirror.com/history/-/history-4.10.1.tgz"
+  "version" "4.10.1"
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    "loose-envify" "^1.2.0"
+    "resolve-pathname" "^3.0.0"
+    "tiny-invariant" "^1.0.2"
+    "tiny-warning" "^1.0.0"
+    "value-equal" "^1.0.1"
+
 "history@^4.6.3":
   "integrity" "sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew=="
   "resolved" "https://registry.npmmirror.com/history/-/history-4.10.1.tgz"
@@ -6510,7 +6656,7 @@
   "resolved" "https://registry.npmmirror.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz"
   "version" "4.4.2"
 
-"lodash@^4.17.11", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.17.20", "lodash@^4.17.21", "lodash@^4.17.3", "lodash@^4.17.5", "lodash@^4.2.1":
+"lodash@^4.17.10", "lodash@^4.17.11", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.17.20", "lodash@^4.17.21", "lodash@^4.17.3", "lodash@^4.17.5", "lodash@^4.2.1":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
   "resolved" "https://registry.npmmirror.com/lodash/-/lodash-4.17.21.tgz"
   "version" "4.17.21"
@@ -7116,6 +7262,33 @@
   "integrity" "sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw=="
   "resolved" "https://registry.npmmirror.com/neo-async/-/neo-async-2.6.2.tgz"
   "version" "2.6.2"
+
+"nerv-devtools@^1.5.7":
+  "integrity" "sha512-0EgQfMAARzhEy8qjU4JqVDu00fb84XHVY4qBGkCbsg/EmVD7ZzLar1e27VRD+juMAIc1QPSMS8wlariwDblAPA=="
+  "resolved" "https://registry.npmmirror.com/nerv-devtools/-/nerv-devtools-1.5.7.tgz"
+  "version" "1.5.7"
+  dependencies:
+    "nerv-shared" "1.4.0"
+    "nerv-utils" "1.4.5"
+    "nervjs" "1.5.7"
+
+"nerv-shared@1.4.0":
+  "integrity" "sha512-cCyeP1hnnnMfM5HRcmMKconGwI8Wl0xwekAU4DvqDC1M8NxCOF4TwDmedgdgyNt9EkWNbiotBRUV5zJsbfOQWA=="
+  "resolved" "https://registry.npmmirror.com/nerv-shared/-/nerv-shared-1.4.0.tgz"
+  "version" "1.4.0"
+
+"nerv-utils@1.4.5":
+  "integrity" "sha512-9XeifC0l+aDXhA0aXcklxS2o7o87xJxMQAl1+iIHrD5Sei/61ubap0oOzb4t9VMhSEvwWm4/rJRd8PGMKZiwiA=="
+  "resolved" "https://registry.npmmirror.com/nerv-utils/-/nerv-utils-1.4.5.tgz"
+  "version" "1.4.5"
+
+"nervjs@^1.5.0", "nervjs@^1.5.7", "nervjs@1.5.7":
+  "integrity" "sha512-x+hGSOETqA+7lbChW+c/NIXEMrCCvm6IaEHlDbZmaNVX0TAyKZinRIHcYr7o5K/pA4qGWjJQmjoNyx+Mx+rVLg=="
+  "resolved" "https://registry.npmmirror.com/nervjs/-/nervjs-1.5.7.tgz"
+  "version" "1.5.7"
+  dependencies:
+    "nerv-shared" "1.4.0"
+    "nerv-utils" "1.4.5"
 
 "next-tick@^1.1.0":
   "integrity" "sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ=="
@@ -8021,7 +8194,7 @@
   "resolved" "https://registry.npmmirror.com/promise-inflight/-/promise-inflight-1.0.1.tgz"
   "version" "1.0.1"
 
-"prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.8.1":
+"prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmmirror.com/prop-types/-/prop-types-15.8.1.tgz"
   "version" "15.8.1"
@@ -8165,6 +8338,13 @@
   "resolved" "https://registry.npmmirror.com/quick-lru/-/quick-lru-4.0.1.tgz"
   "version" "4.0.1"
 
+"raf@^3.4.1":
+  "integrity" "sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA=="
+  "resolved" "https://registry.npmmirror.com/raf/-/raf-3.4.1.tgz"
+  "version" "3.4.1"
+  dependencies:
+    "performance-now" "^2.1.0"
+
 "randombytes@^2.0.0", "randombytes@^2.0.1", "randombytes@^2.0.5", "randombytes@^2.1.0":
   "integrity" "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ=="
   "resolved" "https://registry.npmmirror.com/randombytes/-/randombytes-2.1.0.tgz"
@@ -8195,7 +8375,17 @@
     "iconv-lite" "0.4.24"
     "unpipe" "1.0.0"
 
-"react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^17.0.0", "react-dom@15.x || ^16.0.0-0":
+"react-dom@^16.13.1":
+  "integrity" "sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw=="
+  "resolved" "https://registry.npmmirror.com/react-dom/-/react-dom-16.14.0.tgz"
+  "version" "16.14.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+    "prop-types" "^15.6.2"
+    "scheduler" "^0.19.1"
+
+"react-dom@^16.8 || ^17.0 || ^18.0", "react-dom@^17.0.0", "react-dom@>=16.13.0", "react-dom@15.x || ^16.0.0-0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmmirror.com/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -8291,13 +8481,22 @@
     "prop-types" "^15.6.1"
     "warning" "^4.0.1"
 
-"react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0", "react@^17.0.1", "react@>=15", "react@15.x || ^16.0.0-0", "react@17.0.2":
+"react@^0.14.0 || ^15.0.0-0 || ^16.0.0-0", "react@^16.8 || ^17.0 || ^18.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^17.0.0", "react@^17.0.1", "react@>=15", "react@>=16.13.0", "react@15.x || ^16.0.0-0", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmmirror.com/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
   dependencies:
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
+
+"react@^16.13.1", "react@^16.14.0":
+  "integrity" "sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g=="
+  "resolved" "https://registry.npmmirror.com/react/-/react-16.14.0.tgz"
+  "version" "16.14.0"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
+    "prop-types" "^15.6.2"
 
 "read-cache@^1.0.0":
   "integrity" "sha512-Owdv/Ft7IjOgm/i0xvNDZ1LrRANRfew4b2prF3OWMQLxLfu3bS8FVhCsrSCMK4lR56Y9ya+AThoTpDCTxCmpRA=="
@@ -8816,6 +9015,14 @@
   "version" "3.1.11"
   dependencies:
     "xmlchars" "^2.1.1"
+
+"scheduler@^0.19.1":
+  "integrity" "sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA=="
+  "resolved" "https://registry.npmmirror.com/scheduler/-/scheduler-0.19.1.tgz"
+  "version" "0.19.1"
+  dependencies:
+    "loose-envify" "^1.1.0"
+    "object-assign" "^4.1.1"
 
 "scheduler@^0.20.1", "scheduler@^0.20.2":
   "integrity" "sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ=="
@@ -9356,6 +9563,16 @@
     "safer-buffer" "^2.0.2"
     "tweetnacl" "~0.14.0"
 
+"ssr-window@^1.0.1":
+  "integrity" "sha512-dgFqB+f00LJTEgb6UXhx0h+SrG50LJvti2yMKMqAgzfUmUXZrLSv2fjULF7AWGwK25EXu8+smLR3jYsJQChPsg=="
+  "resolved" "https://registry.npmmirror.com/ssr-window/-/ssr-window-1.0.1.tgz"
+  "version" "1.0.1"
+
+"ssr-window@^2.0.0":
+  "integrity" "sha512-NXzN+/HPObKAx191H3zKlYomE5WrVIkoCB5IaSdvKokxTpjBdWfr0RaP+1Z5KOfDT0ZVz+2tdtiBkhsEQ9p+0A=="
+  "resolved" "https://registry.npmmirror.com/ssr-window/-/ssr-window-2.0.0.tgz"
+  "version" "2.0.0"
+
 "ssr-window@^3.0.0", "ssr-window@^3.0.0-alpha.1":
   "integrity" "sha512-q+8UfWDg9Itrg0yWK7oe5p/XRCJpJF9OBtXfOPgSJl+u3Xd5KI328RUEvUqSMVM9CiQUEf1QdBzJMkYGErj9QA=="
   "resolved" "https://registry.npmmirror.com/ssr-window/-/ssr-window-3.0.0.tgz"
@@ -9731,6 +9948,14 @@
   "resolved" "https://registry.npmmirror.com/svg-tags/-/svg-tags-1.0.0.tgz"
   "version" "1.0.0"
 
+"swiper@4.4.2":
+  "integrity" "sha512-Vfl4Zw4Z7iZwUu5S11JeC7OSy4nwky29nkUulkmg8lIqcWla6UtOhdap0gkyJRYS+UJXki+GWQsbFM0SZRxZPQ=="
+  "resolved" "https://registry.npmmirror.com/swiper/-/swiper-4.4.2.tgz"
+  "version" "4.4.2"
+  dependencies:
+    "dom7" "^2.1.2"
+    "ssr-window" "^1.0.1"
+
 "swiper@6.8.0":
   "integrity" "sha512-6H3e7VOihasMp8sPXNhRDkc61UD0XeFlefbWfUHecBLBTtmA+9WxJiKDBMdzgetK1cny+5+mKfVcsmxYgnEDSw=="
   "resolved" "https://registry.npmmirror.com/swiper/-/swiper-6.8.0.tgz"
@@ -9797,6 +10022,37 @@
     "css-color-keywords" "^1.0.0"
     "css-mediaquery" "^0.1.2"
     "postcss-value-parser" "^3.3.0"
+
+"taro-skeleton@^2.0.4":
+  "integrity" "sha512-ndPNZAr9UR+jHOUdalTCkG7H/W4jynCJGcR6GQgbSgGgoTqoV2fWYKZDVZS4Y1KVcWPXzNre3Zi+MxqVzS0AkQ=="
+  "resolved" "https://registry.npmmirror.com/taro-skeleton/-/taro-skeleton-2.0.4.tgz"
+  "version" "2.0.4"
+  dependencies:
+    "@tarojs/components" "3.0.11"
+    "@tarojs/router" "3.0.11"
+    "@tarojs/taro" "3.0.11"
+    "@tarojs/taro-alipay" "2.1.0"
+    "@tarojs/taro-h5" "3.0.11"
+    "@tarojs/taro-qq" "2.1.0"
+    "@tarojs/taro-quickapp" "2.1.0"
+    "@tarojs/taro-swan" "2.1.0"
+    "@tarojs/taro-tt" "2.1.0"
+    "@tarojs/taro-weapp" "2.1.0"
+    "classnames" "^2.2.6"
+    "nerv-devtools" "^1.5.7"
+    "nervjs" "^1.5.7"
+    "react" "^16.13.1"
+    "react-dom" "^16.13.1"
+
+"taro-ui@^3.0.0-alpha.10":
+  "integrity" "sha512-sNgMFKv1WrcUvxVrIP5CwzfSAdx5nCGJhb5+4atzK+nJneuX9lKO4hZhlJ4FchrlF68QjM5s5Rb47VAuXVbKsA=="
+  "resolved" "https://registry.npmmirror.com/taro-ui/-/taro-ui-3.0.0-alpha.10.tgz"
+  "version" "3.0.0-alpha.10"
+  dependencies:
+    "classnames" "^2.2.6"
+    "dayjs" "^1.7.7"
+    "lodash" "^4.17.10"
+    "prop-types" "^15.7.2"
 
 "terser-webpack-plugin@^1.4.3":
   "integrity" "sha512-04Rfe496lN8EYruwi6oPQkG0vo8C+HT49X687FZnpPF0qMAIHONI6HEXYPKDOE8e5HjXTyKfqRd/agHtH0kOtw=="
@@ -10064,6 +10320,11 @@
   "resolved" "https://registry.npmmirror.com/typedarray/-/typedarray-0.0.6.tgz"
   "version" "0.0.6"
 
+"typescript@>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta", "typescript@3.9.7":
+  "integrity" "sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw=="
+  "resolved" "https://registry.npmmirror.com/typescript/-/typescript-3.9.7.tgz"
+  "version" "3.9.7"
+
 "uglify-js@^3.5.1":
   "integrity" "sha512-6iCVm2omGJbsu3JWac+p6kUiOpg3wFO2f8lIXjfEb8RrmLjzog1wTPMmwKB7swfzzqxj9YM+sGUM++u1qN4qJg=="
   "resolved" "https://registry.npmmirror.com/uglify-js/-/uglify-js-3.15.3.tgz"
@@ -10093,6 +10354,11 @@
   "version" "1.1.4"
   dependencies:
     "string.fromcodepoint" "^0.2.1"
+
+"unfetch@^4.1.0":
+  "integrity" "sha512-F9p7yYCn6cIW9El1zi0HI6vqpeIvBsr3dSuRO6Xuppb1u5rXpCPmMvLSyECLhybr9isec8Ohl0hPekMVrEinDA=="
+  "resolved" "https://registry.npmmirror.com/unfetch/-/unfetch-4.2.0.tgz"
+  "version" "4.2.0"
 
 "unicode-canonical-property-names-ecmascript@^2.0.0":
   "integrity" "sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ=="
@@ -10526,6 +10792,11 @@
   "version" "1.0.5"
   dependencies:
     "iconv-lite" "0.4.24"
+
+"whatwg-fetch@^2.0.4":
+  "integrity" "sha512-dcQ1GWpOD/eEQ97k66aiEVpNnapVj90/+R+SXTPYGHpYBBypfKJEQjLrvMZ7YXbKm21gXd4NcuxUTjiv1YtLng=="
+  "resolved" "https://registry.npmmirror.com/whatwg-fetch/-/whatwg-fetch-2.0.4.tgz"
+  "version" "2.0.4"
 
 "whatwg-fetch@^3.4.0", "whatwg-fetch@>=0.10.0":
   "integrity" "sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA=="

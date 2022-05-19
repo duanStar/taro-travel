@@ -1,6 +1,12 @@
 // eslint-disable-next-line no-undef
 export default defineAppConfig({
-  pages: ["pages/index/index", "pages/order/index", "pages/airportList/index"],
+  pages: [
+    "pages/index/index",
+    "pages/order/index",
+    "pages/airportList/index",
+    "pages/calendar/index",
+    "pages/flight/list/index",
+  ],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",
@@ -26,5 +32,10 @@ export default defineAppConfig({
         text: "我的订单",
       },
     ],
+  },
+  permission: {
+    "scope.userLocation": {
+      desc: "为了更好的服务, 我们希望获取你的位置",
+    },
   },
 });

@@ -1,11 +1,14 @@
 import { PureComponent } from 'react';
 import { View, SwiperItem, Button, Text, Swiper, Image } from '@tarojs/components';
 import dayjs from 'dayjs';
+import { connect } from 'react-redux'
 import './index.scss';
 
 import Tab from '@/components/Tab';
 import NoExploit from '@/components/NoExploit'
 import { adsReq } from '@/common/api'
+import tools from '@/common/tools';
+import Taro from '@tarojs/taro';
 
 const FLIGHT_TABS = [
   {
@@ -34,6 +37,7 @@ class FlightIndex extends PureComponent {
 
   componentDidMount() {
     this.getAds()
+    this.getLocationInfo()
   }
 
   getAds = () => {
@@ -47,6 +51,79 @@ class FlightIndex extends PureComponent {
   handleTabClick(id) {
     console.log(id);
   }
+
+  chooseFlightCity(type) {
+    this.props.dispatch({
+      type: 'flightIndex/updateState',
+      payload: {
+        cityType: type
+      }
+    })
+    tools.navigateTo({
+      url: '/pages/airportList/index'
+    })
+  }
+
+  chooseFlightDate() {
+    tools.navigateTo({
+      url: '/pages/calendar/index'
+    })
+  }
+
+  getLocationInfo = () => {
+    Taro.getLocation({
+      type: 'gcj02'
+    }).then(res => {
+      const {latitude, longitude} = res
+      this.getCity({latitude, longitude})
+    })
+      .catch(() => {
+        tools.showToast("位置获取失败")
+      })
+  }
+
+  getCity = ({latitude, longitude}) => {
+    Taro.request({
+      url: `https://apis.map.qq.com/ws/geocoder/v1/?key=Y2CBZ-GFXWG-2NPQ5-I5Q7P-XTBEJ-FKFFO&location=${latitude},${longitude}`
+    }).then(res => {
+      const { data } = res
+      const cityInfo = data?.result?.ad_info || {}
+      this.props.dispatch({
+        type: 'flightIndex/updateState',
+        payload: {
+          dptCityId: cityInfo.city_code || 2,
+          dptCityName: cityInfo.city || '上海'
+        }
+      })
+    }).catch(() => {
+      tools.showToast("位置获取失败")
+    })
+  }
+
+  onLinkToList = () => {
+    const { 
+      arrCityName,
+      dptCityName,
+      dptDate,
+      dptCityId,
+      dptAirportName,
+      arrAirportName,
+      arrCityId
+    } = this.props.flightIndex
+    tools.navigateTo({
+      url: '/pages/flight/list/index',
+      data: { 
+        arrCityName,
+        dptCityName,
+        dptDate,
+        dptCityId,
+        dptAirportName,
+        arrAirportName,
+        arrCityId
+      }
+    })
+  }
+
   render() {
     const { isExchange, adList } = this.state;
     const { arrCityName, dptCityName, dptDate } = this.props.flightIndex
@@ -79,7 +156,7 @@ class FlightIndex extends PureComponent {
               {dayjs(dptDate).format("M月D日")}
             </View>
             <Button className="search-btn" onClick={this.onLinkToList}>
-                搜一下吧～
+                机票查询
             </Button>
           </SwiperItem>
           {/*  多程  */}
@@ -101,4 +178,6 @@ class FlightIndex extends PureComponent {
   }
 }
 
-export default FlightIndex;
+export default connect(({ flightIndex }) => ({
+  flightIndex
+}))(FlightIndex);

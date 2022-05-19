@@ -1,4 +1,5 @@
 import Taro from "@tarojs/taro";
+import { objectToString } from "./utils";
 
 const tools = {
   /**
@@ -77,6 +78,17 @@ const tools = {
       throw new Error("参数类型有误,应该是字符串或对象");
     }
     return Taro.showToast(options);
+  },
+  /**
+   * 返回
+   * @param {String} 页面url
+   * @param {Object} 路径参数data
+   */
+  navigateTo: ({ url, data }) => {
+    const searchStr = objectToString(data);
+    Taro.navigateTo({
+      url: `${url}?${searchStr}`,
+    });
   },
 };
 

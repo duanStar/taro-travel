@@ -15,3 +15,10 @@ export const airportCityListReq = (data) => {
     params: data,
   });
 };
+
+export const flightListReq = (data) => {
+  return tools.request({
+    url: `${API_PRE}/list/singleList`,
+    params: data,
+  });
+};

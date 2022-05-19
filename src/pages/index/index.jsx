@@ -33,11 +33,6 @@ export default class Index extends Component {
       width: `${100 / DEFAULT_TAB_LIST.length}%`,
       transform: `translateX(${tabIndex * 100}%)`,
     }
-    const flightIndex = {
-      arrCityName: '上海',
-      dptCityName: '天津',
-      dptDate: new Date()
-    }
     return (
       <View className="index-container">
         <View className="top">
@@ -53,7 +48,7 @@ export default class Index extends Component {
         {
           DEFAULT_TAB_LIST[tabIndex]['tab'] === 'flight' ? (
             <View className="content">
-              <FlightIndex flightIndex={flightIndex} />
+              <FlightIndex  />
             </View>
           ) : <NoExploit />
         }
