@@ -6,6 +6,8 @@ export default defineAppConfig({
     "pages/airportList/index",
     "pages/calendar/index",
     "pages/flight/list/index",
+    "pages/flight/detail/index",
+    "pages/login/index",
   ],
   window: {
     backgroundTextStyle: "light",

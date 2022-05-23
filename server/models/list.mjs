@@ -61,7 +61,7 @@ const randomPrice = (min, max) => {
 };
 
 router.get("/singleList", async (req, res) => {
-  const { dptAirportName, aptCityName, arrAirportName, arrCityName, dptDate } =
+  const { dptAirportName, dptCityName, arrAirportName, arrCityName, dptDate } =
     req.query;
 
   const strSql = `select * from flight_list`;
@@ -71,7 +71,7 @@ router.get("/singleList", async (req, res) => {
       return {
         ...item,
         dptAirportName,
-        aptCityName,
+        dptCityName,
         arrAirportName,
         arrCityName,
         aptTime: dptDate,

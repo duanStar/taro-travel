@@ -10,6 +10,12 @@ app.use(
     allowedOrigins: ["*"],
   })
 );
+app.use(express.json({}));
+app.use(
+  express.urlencoded({
+    extended: false,
+  })
+);
 models(app);
 
 const port = 3000;

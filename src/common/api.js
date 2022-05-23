@@ -22,3 +22,19 @@ export const flightListReq = (data) => {
     params: data,
   });
 };
+
+export const loginReq = (data) => {
+  return tools.request({
+    url: `${API_PRE}/login`,
+    method: "post",
+    params: data,
+  });
+};
+
+export const orderReq = (data) => {
+  return tools.request({
+    url: `${API_PRE}/order/orderList`,
+    method: "post",
+    params: data,
+  });
+};

@@ -10,7 +10,6 @@ import './index.scss'
 import { flightListReq } from '@/common/api';
 import tools from '@/common/tools';
 
-
 class List extends PureComponent {
   constructor(props) {
     super(props);
@@ -64,6 +63,12 @@ class List extends PureComponent {
     }
     return res;
   };
+  onFlightClick = (flight) => {
+    tools.navigateTo({
+      url: '/pages/flight/detail/index',
+      data: flight
+    })
+  }
   getList = () => {
     const { flightData } = this.state
     tools.showLoading()

@@ -90,6 +90,56 @@ const tools = {
       url: `${url}?${searchStr}`,
     });
   },
+  /**
+   * 带过期时间的缓存
+   * @param {*} key 键
+   * @param {*} value 值
+   * @param {*} time 缓存有效时间 单位：s
+   */
+  setStorageSyncWithTime: (key, value, time) => {
+    try {
+      const curTime = Date.now();
+      const expiredTime = curTime + time * 1000;
+      Taro.setStorageSync(key, {
+        [key]: value,
+        expiredTime,
+      });
+    } catch (err) {
+      console.log(err.toString());
+    }
+  },
+  /**
+   * 获取缓存
+   * @param {*} key 键
+   * @returns
+   */
+  getStorageSyncWithTime: (key) => {
+    try {
+      const result = Taro.getStorageSync(key);
+      const { expiredTime } = result;
+      if (Date.now() > expiredTime) {
+        Taro.removeStorageSync(key);
+      } else {
+        return result[key];
+      }
+    } catch (err) {
+      console.log(err.toString());
+    }
+  },
+  /**
+   * 如果登录执行函数
+   * @param {Function} fn
+   */
+  doLogin: (fn) => {
+    const userInfo = tools.getStorageSyncWithTime("userInfo");
+    if (!userInfo) {
+      tools.navigateTo({
+        url: "/pages/login/index",
+      });
+    } else {
+      fn?.();
+    }
+  },
 };
 
 export default tools;

@@ -38,3 +38,22 @@ export const weekDay = (date = "") => {
       return "";
   }
 };
+
+/**
+ * 防抖
+ * @param {Function} fn 函数
+ * @param {Number} delay 延迟毫秒数
+ * @returns {Function} 防抖函数
+ */
+export const debounce = (fn, delay) => {
+  let timer = null;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+    timer = setTimeout(() => {
+      fn.apply(this, args);
+    }, delay);
+  };
+};
