@@ -38,3 +38,11 @@ export const orderReq = (data) => {
     params: data,
   });
 };
+
+export const orderListReq = (data) => {
+  return tools.request({
+    url: `${API_PRE}/order/getOrderList`,
+    method: "post",
+    params: data,
+  });
+};

@@ -119,6 +119,7 @@ const tools = {
       const { expiredTime } = result;
       if (Date.now() > expiredTime) {
         Taro.removeStorageSync(key);
+        return null;
       } else {
         return result[key];
       }

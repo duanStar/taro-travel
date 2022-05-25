@@ -13,7 +13,7 @@ const IsLogin = (WrappedComponent) => {
     }
 
     render() {
-      return <WrappedComponent />
+      return <WrappedComponent {...this.props} />
     }
   }
 }

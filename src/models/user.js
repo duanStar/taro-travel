@@ -1,7 +1,7 @@
-import Taro from "@tarojs/taro";
+import tools from "@/common/tools";
 
 const init = () => {
-  const userInfo = Taro.getStorageSync("userInfo");
+  const userInfo = tools.getStorageSyncWithTime("userInfo");
   return {
     isLogin: !!userInfo?.userPhone,
     userPhone: userInfo?.userPhone,
@@ -19,6 +19,11 @@ export default {
       return {
         ...state,
         ...action.payload,
+      };
+    },
+    logout() {
+      return {
+        ...init(),
       };
     },
   },

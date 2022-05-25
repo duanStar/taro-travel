@@ -35,4 +35,23 @@ router.post("/orderList", async (req, res) => {
   }
 });
 
+router.post("/getOrderList", async (req, res) => {
+  try {
+    const { userPhone } = req.body;
+    const querySql = `select * from orderList where userPhone=${userPhone} order by id desc`;
+    const result = await sqlQuery(querySql);
+    res.send({
+      code: 1,
+      message: "查询成功",
+      data: result,
+    });
+  } catch (err) {
+    res.send({
+      code: -1,
+      message: "请求失败",
+      error: err.toString(),
+    });
+  }
+});
+
 export default router;
