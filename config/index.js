@@ -1,5 +1,6 @@
 import { resolve } from "path";
 
+const TARO_ENV = process.env.TARO_ENV;
 const config = {
   alias: {
     "@": resolve(__dirname, "../src"),
@@ -14,7 +15,7 @@ const config = {
     828: 1.81 / 2,
   },
   sourceRoot: "src",
-  outputRoot: "dist",
+  outputRoot: "dist/" + TARO_ENV,
   plugins: [],
   defineConstants: {},
   copy: {

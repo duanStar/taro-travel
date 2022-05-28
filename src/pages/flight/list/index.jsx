@@ -1,4 +1,4 @@
-import { PureComponent } from 'react';
+import { Component } from 'react';
 import { View, ScrollView, Text, Image, Block, Picker } from '@tarojs/components'
 import Taro, { getCurrentInstance } from '@tarojs/taro';
 import dayjs from 'dayjs';
@@ -9,8 +9,9 @@ import 'taro-skeleton/dist/index.css'
 import './index.scss'
 import { flightListReq } from '@/common/api';
 import tools from '@/common/tools';
+import VirtualList from '@/components/VirtualList';
 
-class List extends PureComponent {
+class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -115,6 +116,50 @@ class List extends PureComponent {
       }
     }, this.getList)
   }
+  handleRender = (flight, index) => {
+    const {dptTimeStr, dptAirportName, arrTimeStr, arrAirportName, price, airIcon, airCompanyName} = flight
+    return <Block key={flight.id}>
+      {
+        index === 3 && (
+          <View className="notice">
+            <Image className="notice-logo" src="https://i.postimg.cc/dhGPDTjq/2.png"></Image>
+            <Text className="notice-text">价格可能会上涨，建议尽快预定</Text>
+          </View>  
+        )
+      }
+      <View
+        className="list-item"
+        onClick={() => this.onFlightClick(flight)}
+      >
+        <View className="item-price">
+          <View className="flight-row">
+            <View className="depart">
+              <Text className="flight-time">{dptTimeStr}</Text>
+              <Text className="airport-name">
+                {dptAirportName}
+              </Text>
+            </View>
+            <View className="separator">
+              <View className="spt-arr"></View>
+            </View>
+            <View className="arrival">
+              <Text className="flight-time">{arrTimeStr}</Text>
+              <Text className="airport-name">
+                {arrAirportName}
+              </Text>
+            </View>
+          </View>
+          <Text className="flight-price color-red">
+        ¥ {price}
+          </Text>
+        </View>
+        <View className="air-info">
+          <Image className="logo" src={airIcon} />
+          <Text className="company-name">{airCompanyName}</Text>
+        </View>
+      </View>
+    </Block>
+  }
   render() {
     const { dateList, flightData, flightList, scrollTop, curAirCompanyIndex, flightCompanyList } = this.state
     const { dptDate } = flightData
@@ -150,67 +195,10 @@ class List extends PureComponent {
               id="flight-list"
             >
               {/* 性能优化篇：虚拟列表 */}
-              {/* <VirtualList className="flight-scroll-list" list={flightList} onRender={this.handleRender}></VirtualList> */}
-              <ScrollView
-                className="flight-scroll-list"
-                scrollY
-                scrollTop={scrollTop}
-              >
-                {flightList?.map((flight, index) => {
-                  const {
-                    dptAirportName,
-                    dptTimeStr,
-                    arrTimeStr,
-                    arrAirportName,
-                    airIcon,
-                    airCompanyName,
-                    price,
-                  } = flight;
-                  return (
-                    <Block key={flight.id}>
-                      {
-                        index === 3 && (
-                          <View className="notice">
-                            <Image className="notice-logo" src="https://i.postimg.cc/dhGPDTjq/2.png"></Image>
-                            <Text className="notice-text">价格可能会上涨，建议尽快预定</Text>
-                          </View>  
-                        )
-                      }
-                      <View
-                        className="list-item"
-                        onClick={() => this.onFlightClick(flight)}
-                      >
-                        <View className="item-price">
-                          <View className="flight-row">
-                            <View className="depart">
-                              <Text className="flight-time">{dptTimeStr}</Text>
-                              <Text className="airport-name">
-                                {dptAirportName}
-                              </Text>
-                            </View>
-                            <View className="separator">
-                              <View className="spt-arr"></View>
-                            </View>
-                            <View className="arrival">
-                              <Text className="flight-time">{arrTimeStr}</Text>
-                              <Text className="airport-name">
-                                {arrAirportName}
-                              </Text>
-                            </View>
-                          </View>
-                          <Text className="flight-price color-red">
-                          ¥ {price}
-                          </Text>
-                        </View>
-                        <View className="air-info">
-                          <Image className="logo" src={airIcon} />
-                          <Text className="company-name">{airCompanyName}</Text>
-                        </View>
-                      </View>
-                    </Block>
-                  );
-                })}
-              </ScrollView>
+              <VirtualList className="flight-scroll-list" list={flightList} onRender={this.handleRender} scrollViewProps={{
+                scrollTop
+              }}
+              ></VirtualList>
             </View>
           ) : (
             <View className="skeleton-box">

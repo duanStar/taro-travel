@@ -21,8 +21,18 @@ class AirportList extends PureComponent {
   }
   getCityList = () => {
     tools.showLoading()
+    const storageCityList = tools.getStorageSyncWithTime('cityList')
+    if (storageCityList) {
+      this.setState({
+        cityList: storageCityList,
+        letterList: Object.keys(storageCityList)
+      })
+      tools.hideLoading()
+      return
+    }
     airportCityListReq().then(res => {
       const cityList = this.formatList(res.data)
+      tools.setStorageSyncWithTime("cityList", cityList, 60 * 60)
       this.setState({
         cityList,
         letterList: Object.keys(cityList)

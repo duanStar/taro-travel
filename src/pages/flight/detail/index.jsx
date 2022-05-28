@@ -119,23 +119,6 @@ class Detail extends PureComponent {
             <Input disabled placeholder="请输入乘机人手机号" value={userPhone}></Input>
           </View>
         </View>
-        {/* 测试Taro bug */}
-        {/* <Switch
-          onChange={this.onSwitchChange}
-        ></Switch>
-        <View>
-          {
-            isChecked ? (
-              <View className="module-box">
-                <Text className="title">保险</Text>
-                <View className="insurance-name">
-                  <Text>人身意外险</Text>
-                  <Text>¥ 30/人</Text>
-                </View>
-              </View>
-            ) : null
-          }
-        </View> */}
         <View className="price-item">
           <View className="color-red">
             ¥ <Text className="price color-red">{price}</Text>
