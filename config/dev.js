@@ -1,9 +1,18 @@
-module.exports = {
+export default {
   env: {
-    NODE_ENV: '"development"'
+    NODE_ENV: '"development"',
   },
-  defineConstants: {
-  },
+  defineConstants: {},
   mini: {},
-  h5: {}
-}
+  h5: {
+    devServer: {
+      proxy: [
+        {
+          context: ["/"],
+          target: "http://localhost:3000",
+          changeOrigin: true,
+        },
+      ],
+    },
+  },
+};

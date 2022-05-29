@@ -168,11 +168,13 @@ class FlightIndex extends PureComponent {
             <NoExploit className="no-data" />
           </SwiperItem>
         </Tab>
-        <Swiper className="advs-banner-bd" autoplay indicatorDots circular interval={3000}>
-          {
-            adList.map(item => (<SwiperItem key={item.id} className="item"><Image className="img" src={item.imgUrl} /></SwiperItem>))
-          }
-        </Swiper>
+        <View className="alipay-swiper">
+          <Swiper className="advs-banner-bd" autoplay indicatorDots circular interval={3000}>
+            {
+              adList.map(item => (<SwiperItem key={item.id} className="item"><Image className="img" src={item.imgUrl} /></SwiperItem>))
+            }
+          </Swiper>
+        </View>
       </View>
     </View>
   }

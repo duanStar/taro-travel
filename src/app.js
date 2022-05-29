@@ -2,6 +2,7 @@ import { Component } from "react";
 import createApp from "./dva";
 import models from "./models";
 import { Provider } from "react-redux";
+import "promise-prototype-finally";
 
 import "./app.scss";
 import "./assets/iconfont/iconfont.css";

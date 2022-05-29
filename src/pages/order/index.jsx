@@ -18,6 +18,8 @@ const TAB_LIST = [
   {label: '酒店', tab: 'hotel', id: 2},
   {label: '汽车票', tab: 'bus', id: 3}
 ];
+
+const IS_BAIDU = tools.isBaidu
 @connect(({ user }) => ({
   ...user
 }))
@@ -118,7 +120,7 @@ class Order extends PureComponent {
   render() {
     const { isLogin, nickName } = this.props
     return isLogin ? (
-      <View className="home-container">
+      <View className={`home-container ${IS_BAIDU ? 'baidu-home-container' : ''}`}>
         <View className="user-box">
           <Text className="user-name">欢迎，{nickName || "--"}</Text>
           <Text className="login-out-btn" onClick={() => this.onLoginOut()}>退出</Text>

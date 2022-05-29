@@ -65,7 +65,7 @@ class AirportList extends PureComponent {
   render() {
     const { cityList, letterList, currentLetter } = this.state
     return (<View className="airport-list-container">
-      <ScrollView scrollY scrollWithAnimation style={{height: '100vh'}} scrollIntoView={currentLetter}>
+      <ScrollView scrollY scrollWithAnimation={!tools.isAliPay} style={{height: '100vh'}} scrollIntoView={currentLetter}>
         {
           letterList?.map(letter => {
             const list = cityList[letter]

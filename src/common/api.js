@@ -1,6 +1,6 @@
 import tools from "@/common/tools";
 
-const API_PRE = "http://localhost:3000";
+const API_PRE = tools.isH5 ? "" : "http://localhost:3000";
 
 export const adsReq = (data) => {
   return tools.request({

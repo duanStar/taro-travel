@@ -8194,6 +8194,11 @@
   "resolved" "https://registry.npmmirror.com/promise-inflight/-/promise-inflight-1.0.1.tgz"
   "version" "1.0.1"
 
+"promise-prototype-finally@^1.0.0":
+  "integrity" "sha512-r/NOO51lZ2q6yQ1lXRvl9uv5v+DzVhSFS7WzPlKb5YV9eHQiIa1+ao5XYe85VUzfYZOzZ2AnOpJqDC6L2uOlzg=="
+  "resolved" "https://registry.npmmirror.com/promise-prototype-finally/-/promise-prototype-finally-1.0.0.tgz"
+  "version" "1.0.0"
+
 "prop-types@^15.6.0", "prop-types@^15.6.1", "prop-types@^15.6.2", "prop-types@^15.7.2", "prop-types@^15.8.1":
   "integrity" "sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg=="
   "resolved" "https://registry.npmmirror.com/prop-types/-/prop-types-15.8.1.tgz"
